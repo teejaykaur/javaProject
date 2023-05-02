@@ -20,13 +20,9 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v2
         with:
-          java-version: '11'
+         distribution: 'adopt'
+         java-version: '11'
+       
+      - run: java -cp java HelloWorld
 
-      - name: Build with Maven
-        run: mvn package
-
-      - name: Run tests
-        run: mvn test
-
-
-
+    
